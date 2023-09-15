@@ -35,3 +35,26 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/**
+ * Container
+ */
+.container {
+  @apply ml-auto mr-auto w-full pl-4 pr-4;
+}
+
+.container--sm {
+  @apply max-w-4xl;
+}
+
+.container--md {
+  @apply max-w-5xl;
+}
+
+.container--lg {
+  @apply max-w-5xl;
+}
+
+.container--xl {
+  @apply max-w-7xl;
+}

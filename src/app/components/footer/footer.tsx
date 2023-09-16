@@ -8,6 +8,7 @@ import {
     faYoutube,
     faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { LanguageSelector } from "../language-selector"
 
 const navigation = [
     { name: 'Website Privacy Notice', href: 'https://mozilla.org/privacy/websites/' },
@@ -38,6 +39,8 @@ export const Footer = () => {
                             {item.icon}
                         </Link>
                     ))}
+
+                    <LanguageSelector />
                 </div>
                 <div className="mt-8 md:order-1 md:mt-0 flex flex-col gap-6">
                     <Link href="https://foundation.mozilla.org/" target="_blank" rel="nofollow noreferrer">

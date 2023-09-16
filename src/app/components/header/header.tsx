@@ -4,15 +4,7 @@ import React from "react"
 import { Popover } from '@headlessui/react'
 import Link from 'next/link';
 import Image from "next/image";
-
-interface NavigationItem {
-    text: string;
-    slug: string;
-}
-
-interface HeaderProps {
-    navigation: NavigationItem[];
-}
+import { HeaderProps } from "./types";
 
 export const Header: React.FC<HeaderProps> = ({ navigation }) => {
     return (

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useTranslation } from '../i18n'
 
 export default async function Page({ params: { lng } }) {

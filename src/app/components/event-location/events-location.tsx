@@ -1,15 +1,13 @@
 'use client'
 
 import React from "react"
-import Link from 'next/link';
 import Image from "next/image";
 import "@reach/tabs/styles.css";
 
 export const EventLocation = () => {
 
-
     return (
-        <div className={`bg-white text-black section section--xl`}>
+        <div id="info" className={`bg-white text-black section section--xl`}>
             <div className="container container--xl">
                 <div>
 

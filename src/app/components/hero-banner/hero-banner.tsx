@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const HeroBanner = () => {
     return (
-        <div className={`bg-black text-white section section--xl`}>
+        <div id="hero-banner" className={`bg-black text-white section section--xl`}>
             <div className="container container--sm">
                 <div className={`flex flex-col gap-12 lg:gap-16`}>
                     <Image

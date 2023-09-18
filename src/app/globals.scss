@@ -196,3 +196,18 @@ p a {
 .event-info-heading {
   @apply text-tertiary font-bold text-2xl flex flex-col;
 }
+
+/**
+ * Event Location
+ */
+.event-location {
+  @apply flex flex-col lg:flex-row lg:justify-between gap-12 lg:gap-24;
+}
+
+.event-location-col {
+  @apply flex flex-col gap-8 lg:basis-3/6 lg:gap-12;
+}
+
+.event-location-direction {
+  @apply space-y-4;
+}

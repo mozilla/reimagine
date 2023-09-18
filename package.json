@@ -26,6 +26,7 @@
     "downshift": "^8.1.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
+    "gsap": "^3.12.2",
     "i18next": "^23.5.1",
     "i18next-resources-to-backend": "^1.1.4",
     "next": "13.4.19",

@@ -100,7 +100,7 @@ p {
  * Section
  */
 .section {
-  @apply py-4 lg:py-8;
+  @apply py-4 lg:py-8 overflow-hidden;
 }
 
 .section--lg {
@@ -146,7 +146,22 @@ p {
 }
 
 [data-reach-tab-list] {
-  @apply min-w-[200px] bg-transparent #{!important};
+  @apply hidden lg:flex min-w-[200px] bg-transparent #{!important};
+}
+
+/**
+* Reach UI Menu
+*/
+[data-reach-menu-popover] {
+  @apply w-[240px] -mt-[1px];
+}
+
+[data-reach-menu-button] {
+  @apply border border-slate-400 p-3 rounded-sm bg-white w-[240px] mx-auto inline-flex gap-2 items-center justify-center;
+}
+
+[data-reach-menu-items] {
+  @apply text-black;
 }
 
 /**

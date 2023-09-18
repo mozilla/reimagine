@@ -3,8 +3,19 @@
 import React, { useState } from "react"
 import Link from 'next/link';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
-import "@reach/tabs/styles.css";
 
+import {
+    Menu,
+    MenuList,
+    MenuButton,
+    MenuItem,
+    MenuItems,
+    MenuPopover,
+    MenuLink,
+} from "@reach/menu-button";
+
+import "@reach/tabs/styles.css";
+import "@reach/menu-button/styles.css";
 
 interface Talk {
     time: string;
@@ -122,6 +133,7 @@ const events: Event[] = [
 export const EventsList = () => {
     const defaultTabIndex = 0;
     const [tabIndex, setTabIndex] = useState(defaultTabIndex);
+    const currentEvent = events[tabIndex];
 
     const handleTabsChange = (index: number) => {
         setTabIndex(index);
@@ -134,6 +146,25 @@ export const EventsList = () => {
     return (
         <div id="agenda" className={`${eventColors[getColorIndex(tabIndex)]} text-black section section--xl`}>
             <div className="container container--xl">
+
+                <div className="flex justify-center lg:hidden mb-6">
+                    <Menu>
+                        <MenuButton>
+                            <span>
+                                {`${currentEvent.day}, ${currentEvent.date}`}
+                            </span>
+                            <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.25 1.75L6.5 7L11.75 1.75" stroke="#9595A2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </MenuButton>
+                        <MenuList>
+                            {events.map((event, index) => (
+                                <MenuItem key={index} onSelect={() => handleTabsChange(index)}>{`${event.day}, ${event.date}`}</MenuItem>
+                            ))}
+                        </MenuList>
+                    </Menu>
+                </div>
+
                 <Tabs defaultIndex={defaultTabIndex} orientation="vertical" index={tabIndex} onChange={handleTabsChange}>
                     <TabList>
                         {events.map((event, index) => (

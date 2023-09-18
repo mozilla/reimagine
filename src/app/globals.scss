@@ -217,29 +217,28 @@ p a {
 }
 
 .marquee {
-  display: block;
-  overflow: hidden;
+  @apply block;
+}
 
-  &__wrap {
-    overflow: hidden;
-  }
+.marquee-wrap {
+  @apply overflow-hidden;
+}
 
-  &__row {
-    display: flex;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-  }
+.marquee-row {
+  @apply flex relative text-center whitespace-nowrap;
+}
 
-  &__item {
-    position: relative;
-    will-change: transform;
+.marquee-item {
+  @apply flex items-center relative will-change-transform;
+}
 
+.marquee-item-text {
+  @apply relative inline-block px-8 lg:px-16 z-[1];
+}
+
+.marquee {
+  &-item {
     &-text {
-      position: relative;
-      display: inline-block;
-      padding: 0 64px;
-      z-index: 1;
       font-size: clamp(92px, calc(1.5rem + ((1vw - 7.68px) * 1.0417)), 1.875vw);
     }
   }

@@ -4,8 +4,16 @@ import { EventsList } from '../components/events-list'
 import { EventLocation } from '../components/event-location'
 import { Marquee } from '../components/marquee'
 
-export default async function Page({ params: { lng } }) {
-  const { t } = await useTranslation(lng)
+interface PageProps {
+  params: {
+    lng: string,
+  };
+}
+
+export default async function Page({ params: { lng } }: PageProps) {
+  const { t } = await useTranslation(lng);
+
+  console.log(t("title"));
 
   return (
     <main className="flex min-h-screen flex-col">

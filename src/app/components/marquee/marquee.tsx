@@ -34,6 +34,7 @@ export const Marquee = () => {
             // Animation Loop
             marqueeItems.forEach((e, i) => {
                 // Reset item positions
+                // @ts-ignore
                 gsap.set(e, { x: 0 });
 
                 // @ts-ignore

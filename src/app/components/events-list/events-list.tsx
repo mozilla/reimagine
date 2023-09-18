@@ -154,7 +154,7 @@ export const EventsList = () => {
                                 {`${currentEvent.day}, ${currentEvent.date}`}
                             </span>
                             <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.25 1.75L6.5 7L11.75 1.75" stroke="#9595A2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M1.25 1.75L6.5 7L11.75 1.75" stroke="#9595A2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </MenuButton>
                         <MenuList>

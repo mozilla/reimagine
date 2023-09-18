@@ -81,11 +81,11 @@ p a {
 }
 
 .container--sm {
-  @apply max-w-4xl;
+  @apply max-w-3xl;
 }
 
 .container--md {
-  @apply max-w-5xl;
+  @apply max-w-4xl;
 }
 
 .container--lg {
@@ -176,4 +176,23 @@ p a {
 
 .event-talk-invite-only {
   @apply text-black text-opacity-50;
+}
+
+/**
+ * Event Info
+ */
+.event-info {
+  @apply flex flex-col lg:flex-row lg:justify-between gap-6;
+}
+
+.event-info-col {
+  @apply flex flex-col gap-2 lg:basis-3/6;
+}
+
+.event-info-col:first-of-type {
+  @apply items-end lg:items-start;
+}
+
+.event-info-heading {
+  @apply text-tertiary font-bold text-2xl flex flex-col;
 }

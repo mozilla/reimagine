@@ -36,6 +36,7 @@ export default async function RootLayout({
 
   console.log(navigationItems)
 
+
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={inter.className}>

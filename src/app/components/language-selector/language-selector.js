@@ -1,19 +1,18 @@
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useSelect, resetIdCounter } from "downshift";
 import classNames from "classnames";
 import Link from "next/link";
 import styles from "./language-selector.module.css";
 
 export const LanguageSelector = () => {
-  const { locale, locales, asPath } = useRouter();
+  // const { locale, locales, asPath } = useRouter();
+  const locale = "en";
+  const locales = ["en", "de"];
   const items = locales;
-  console.log("🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷");
-  console.log("🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷");
-  console.log("ITEMS: ", useRouter());
-  console.log("🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷");
-  console.log("🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷");
-  let languageNames = [];
-  // let languageNames = new Intl.DisplayNames([locale], { type: "language" });
+  const pathname = usePathname();
+  let languageNames = new Intl.DisplayNames([locale], { type: "language" });
+
+  // let languageNames = ["en", "de"];
 
   const {
     isOpen,
@@ -54,7 +53,7 @@ export const LanguageSelector = () => {
               {...getItemProps({ item, index })}
               className={styles.item}
             >
-              <Link href={asPath} locale={item} className={styles.link}>
+              <Link href={pathname} locale={item} className={styles.link}>
                 {`${languageNames.of(item)} - ${item.toUpperCase()}`}
               </Link>
             </li>

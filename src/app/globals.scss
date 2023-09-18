@@ -215,3 +215,32 @@ p a {
 .event-location-direction {
   @apply space-y-4;
 }
+
+.marquee {
+  display: block;
+
+  &__wrap {
+    overflow: hidden;
+  }
+
+  &__row {
+    display: flex;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  &__item {
+    position: relative;
+    will-change: transform;
+    border-right: 1px solid currentColor;
+
+    &-text {
+      position: relative;
+      display: inline-block;
+      padding: 0 64px;
+      z-index: 1;
+      font-size: clamp(24px, calc(1.5rem + ((1vw - 7.68px) * 1.0417)), 1.875vw);
+    }
+  }
+}

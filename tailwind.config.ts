@@ -17,8 +17,6 @@ const config: Config = {
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        light: "var(--color-light)",
-        dark: "var(--color-dark)",
         gray: "var(--color-gray)",
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",

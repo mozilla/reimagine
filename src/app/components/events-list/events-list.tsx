@@ -132,7 +132,7 @@ export const EventsList = () => {
     }
 
     return (
-        <div className={`${eventColors[getColorIndex(tabIndex)]} text-black section section--xl`}>
+        <div id="agenda" className={`${eventColors[getColorIndex(tabIndex)]} text-black section section--xl`}>
             <div className="container container--xl">
                 <Tabs defaultIndex={defaultTabIndex} orientation="vertical" index={tabIndex} onChange={handleTabsChange}>
                     <TabList>

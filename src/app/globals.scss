@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #79ff97;
+  --color-secondary: #cec2ff;
+  --color-tertiary: #ffb39a;
+  --color-quaternary: #89d5ff;
+  --color-light: #ffffff;
+  --color-gray: #eeeeee;
+  --color-dark: #000000;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/**
+ * Typography
+ */
+
+h1,
+.type-heading-1 {
+  @apply font-semibold text-6xl tracking-tight leading-tight;
+}
+
+h2,
+.type-heading-2 {
+  @apply font-semibold text-5xl tracking-tight leading-tight;
+}
+
+h3,
+.type-heading-3 {
+  @apply font-semibold text-3xl tracking-tight leading-tight;
+}
+
+h4,
+.type-heading-4 {
+  @apply font-semibold text-xl tracking-tight leading-tight;
+}
+
+h5,
+.type-heading-5 {
+  @apply font-semibold text-lg tracking-normal;
+}
+
+p {
+  @apply text-base tracking-normal;
+}
+
+p a {
+  @apply text-primary hover:underline;
+}
+
+/**
+ * Container
+ */
+.container {
+  @apply ml-auto mr-auto w-full pl-4 pr-4;
+}
+
+.container--sm {
+  @apply max-w-4xl;
+}
+
+.container--md {
+  @apply max-w-5xl;
+}
+
+.container--lg {
+  @apply max-w-5xl;
+}
+
+.container--xl {
+  @apply max-w-7xl;
+}
+
+/**
+ * Section
+ */
+.section {
+  @apply py-4 lg:py-8;
+}
+
+.section--lg {
+  @apply py-6 lg:py-12;
+}
+
+.section--xl {
+  @apply py-10 lg:py-20;
+}
+
+/**
+ * Buttons
+ */
+.btn {
+  @apply inline-flex font-medium uppercase py-3 px-4 max-w-max rounded-md cursor-pointer;
+}
+
+.btn-primary {
+  @apply bg-black text-white border-2 border-black hover:bg-transparent hover:text-black;
+}
+
+/**
+* Reach UI Tabs
+*/
+[data-reach-tabs] {
+  @apply gap-12 lg:gap-16 xl:gap-24;
+}
+
+[data-reach-tab] {
+  @apply py-6 lg:py-8 pr-0 #{!important};
+}
+
+[data-reach-tab]:not([data-selected]) {
+  @apply text-black/10 #{!important};
+}
+
+[data-reach-tab]:last-of-type {
+  @apply border-transparent #{!important};
+}
+
+[data-reach-tab]:not(:last-of-type) {
+  @apply border-b border-black border-opacity-10 #{!important};
+}
+
+[data-reach-tab-list] {
+  @apply min-w-[200px] bg-transparent #{!important};
+}
+
+/**
+ * Event Tab
+ */
+.event-tab-date {
+  @apply type-heading-3;
+}
+
+.event-talk-time {
+  @apply min-w-fit;
+}
+.event-talk-name {
+  @apply type-heading-4;
+}
+
+/**
+ * Event Talk
+ */
+.event-talk {
+  @apply flex gap-4 py-6 lg:py-8 border-b border-black border-opacity-10;
+}
+
+.event-talk-inner {
+  @apply flex flex-col gap-6;
+}
+
+.event-talk-invite-only {
+  @apply text-black text-opacity-50;
+}

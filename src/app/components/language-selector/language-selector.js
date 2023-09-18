@@ -1,11 +1,10 @@
-import { useRouter, usePathname } from "next/navigation";
-import { useSelect, resetIdCounter } from "downshift";
+import { usePathname } from "next/navigation";
+import { useSelect } from "downshift";
 import classNames from "classnames";
 import Link from "next/link";
 import styles from "./language-selector.module.css";
 
 export const LanguageSelector = () => {
-  // const { locale, locales, asPath } = useRouter();
   const locale = "en";
   const locales = ["en", "de"];
   const items = locales;
@@ -22,8 +21,6 @@ export const LanguageSelector = () => {
     highlightedIndex,
     getItemProps,
   } = useSelect({ items });
-
-  resetIdCounter();
 
   return (
     <div className={styles.wrapper}>

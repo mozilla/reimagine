@@ -19,9 +19,9 @@ export const Header: React.FC<HeaderProps> = ({ navigation }) => {
                                 <Image
                                     height={70}
                                     width={70}
-                                    className="w-auto h-8 md:h-16"
-                                    src="/nav-logo.svg"
-                                    alt="Reimagine"
+                                    className="w-auto h-6 md:h-8"
+                                    src="/mozilla-logo.svg"
+                                    alt="Mozilla Foundation"
                                 />
                             </Link>
                         </div>

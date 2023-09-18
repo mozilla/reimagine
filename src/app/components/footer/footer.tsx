@@ -48,8 +48,8 @@ export const Footer = () => {
                         <Image
                             height={32}
                             width={110}
-                            className="w-auto h-8"
-                            src="/footer-logo.svg"
+                            className="w-auto h-4 lg:h-6"
+                            src="/mozilla-logo.svg"
                             alt="Mozilla Foundation"
                         />
                     </Link>

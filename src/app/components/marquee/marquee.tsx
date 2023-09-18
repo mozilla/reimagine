@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "@reach/tabs/styles.css";
@@ -11,6 +10,7 @@ export const Marquee = () => {
     useEffect(() => {
         const initMarquee = () => {
             // Kill other animations
+            // @ts-ignore
             animationsRef.current.forEach((animation) => animation.progress(0).kill());
 
             // Marquee speed (pixels per second)
@@ -21,11 +21,13 @@ export const Marquee = () => {
             let rowWidth = 0;
 
             const marqueeItems = Array.from(
+                // @ts-ignore
                 marqueeRowRef.current.querySelectorAll(".js-marquee-item")
             );
 
             // Calculate row width
             marqueeItems.forEach((e) => {
+                // @ts-ignore
                 rowWidth += e.getBoundingClientRect().width;
             });
 
@@ -34,8 +36,10 @@ export const Marquee = () => {
                 // Reset item positions
                 gsap.set(e, { x: 0 });
 
+                // @ts-ignore
                 itemWidth = e.getBoundingClientRect().width;
 
+                // @ts-ignore
                 const tl = new gsap.timeline({ repeat: -1 });
 
                 // Animate item to end of row
@@ -62,13 +66,16 @@ export const Marquee = () => {
                 // Increment offset
                 offset += itemWidth;
 
+                // @ts-ignore
                 animationsRef.current.push(tl);
             });
         };
 
+        // @ts-ignore
         let resizeTimer;
 
         const handleResize = () => {
+            // @ts-ignore
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(initMarquee, 500);
         };

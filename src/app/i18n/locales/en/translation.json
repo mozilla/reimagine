@@ -14,7 +14,7 @@
     "buttonText": "Get Tickets",
     "inviteOnlyText": "Invite Only"
   },
-  "hero": {
+  "heroInfo": {
     "eventLocation": "Alte Münze<br />Berlin",
     "eventDate": "October<br />12-16 2023",
     "eventDescription": "What if the internet was yours to reinvent? Mozilla invites you to an in-person event to shape its destiny and celebrate visionary voices who champion a more ethical, responsible and inclusive web. Together, let’s reclaim the internet."

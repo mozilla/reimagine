@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 import Link from 'next/link';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
-import { Event } from "./types";
+import { Event, Talk } from "./types";
 
 import {
     Menu,

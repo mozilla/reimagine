@@ -3,8 +3,9 @@
 import React from "react"
 import Image from "next/image";
 import "@reach/tabs/styles.css";
+import { EventInfo } from "./types";
 
-export const EventLocation = ({ eventInfo }) => {
+export const EventLocation = ({ eventInfo }: { eventInfo: EventInfo }) => {
 
     const directions = eventInfo?.directions || [];
 

@@ -1,4 +1,4 @@
-interface Talk {
+export interface Talk {
   time: string;
   name: string;
   content: string;

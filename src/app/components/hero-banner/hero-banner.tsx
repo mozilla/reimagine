@@ -2,8 +2,9 @@
 
 import React from "react"
 import Image from "next/image";
+import { HeroInfo } from "./types"
 
-export const HeroBanner = ({ heroInfo }) => {
+export const HeroBanner = ({ heroInfo }: {heroInfo: HeroInfo}) => {
     return (
         <div id="hero-banner" className={`bg-black text-white section section--xl`}>
             <div className="container container--sm">

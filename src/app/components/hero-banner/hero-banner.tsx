@@ -3,7 +3,7 @@
 import React from "react"
 import Image from "next/image";
 
-export const HeroBanner = () => {
+export const HeroBanner = ({ heroInfo }) => {
     return (
         <div id="hero-banner" className={`bg-black text-white section section--xl`}>
             <div className="container container--sm">
@@ -20,18 +20,16 @@ export const HeroBanner = () => {
                             <div className={`max-w-fit text-right`}>
                                 <span>Location</span>
                                 <span className={`event-info-heading`}>
-                                    <span>Alte Münze</span>
-                                    <span>Berlin</span>
+                                    <span dangerouslySetInnerHTML={{ __html: heroInfo.eventLocation }} />
                                 </span>
                             </div>
                         </div>
                         <div className="event-info-col">
                             <span>Date</span>
                             <span className={`event-info-heading`}>
-                                <span>October</span>
-                                <span>12-16 2023</span>
+                                <span dangerouslySetInnerHTML={{ __html: heroInfo.eventDate }} />
                             </span>
-                            <p>What if the internet was yours to reinvent? Mozilla invites you to shape its destiny and celebrate voices working on a more ethical, responsible, and inclusive internet.</p>
+                            {heroInfo.eventDescription && <p>{heroInfo.eventDescription}</p>}
                         </div>
                     </div>
                 </div>

@@ -44,7 +44,7 @@ export const Footer = () => {
     const validLocale = locales.includes(currentLocale) ? currentLocale : "en";
     let languageNames = new Intl.DisplayNames([validLocale], { type: "language" });
 
-    const handleLocaleChange = (locale) => {
+    const handleLocaleChange = (locale: string) => {
         if (currentLocale !== locale) {
             router.push(locale)
         }

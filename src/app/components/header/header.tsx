@@ -5,8 +5,17 @@ import { Popover } from '@headlessui/react'
 import Link from 'next/link';
 import Image from "next/image";
 import { HeaderProps } from "./types";
+import * as gtag from "../../../../lib/gtag";
 
 export const Header: React.FC<HeaderProps> = ({ navigation }) => {
+
+    const handleLinkClick = (linkName: string) => {
+        gtag.event({
+            action: linkName,
+            category: "Header Navigation Click"
+        })
+    }
+
     return (
         <div className="sticky top-0 z-50 w-full ">
 
@@ -14,7 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ navigation }) => {
                 <div className="px-4 sm:px-6 container container--xl">
                     <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
                         <div className="flex justify-start lg:w-0 lg:flex-1">
-                            <Link href="/">
+                            <Link href="/" onClick={() => handleLinkClick('home')}>
                                 <span className="sr-only">Reimagine</span>
                                 <Image
                                     height={70}
@@ -28,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({ navigation }) => {
                         <Popover.Group as="nav" className="space-x-10 md:flex">
                             {
                                 navigation.map((item, index) => (
-                                    <Link key={index} href={`#${item.slug}`} className="text-base font-bold text-gray-900 hover:underline">
+                                    <Link key={index} href={`#${item.slug}`} onClick={() => handleLinkClick(item.text)} className="text-base font-bold text-gray-900 hover:underline">
                                         {item.text}
                                     </Link>
                                 ))

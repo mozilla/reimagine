@@ -15,6 +15,7 @@ import {
     MenuButton,
     MenuItem,
 } from "@reach/menu-button";
+import * as gtag from "../../../../lib/gtag";
 
 const navigation = [
     { name: 'Website Privacy Notice', href: 'https://mozilla.org/privacy/websites/' },
@@ -44,7 +45,12 @@ export const Footer = () => {
     const validLocale = locales.includes(currentLocale) ? currentLocale : "en";
     let languageNames = new Intl.DisplayNames([validLocale], { type: "language" });
 
+
     const handleLocaleChange = (locale: string) => {
+        gtag.event({
+            action: `Locale: ${locale}`,
+            category: "Language change"
+        })
         if (currentLocale !== locale) {
             router.push(locale)
         }

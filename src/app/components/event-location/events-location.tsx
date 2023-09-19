@@ -39,7 +39,7 @@ export const EventLocation = ({ eventInfo }: { eventInfo: EventInfo }) => {
                             height={836}
                             width={566}
                             className="w-full"
-                            src="/map.jpg"
+                            src="/map.png"
                             alt="Alte Münze"
                         />
                     </div>

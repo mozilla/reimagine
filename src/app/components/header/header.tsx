@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ navigation }) => {
                                     height={70}
                                     width={70}
                                     className="w-auto h-6 md:h-8"
-                                    src="/mozilla-logo.svg"
+                                    src="/mozilla-logo-wordmark.svg"
                                     alt="Mozilla Foundation"
                                 />
                             </Link>

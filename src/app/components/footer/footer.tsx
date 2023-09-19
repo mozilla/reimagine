@@ -92,7 +92,7 @@ export const Footer = () => {
                             height={32}
                             width={110}
                             className="w-auto h-4 lg:h-6"
-                            src="/mozilla-logo.svg"
+                            src="/mozilla-logo-wordmark.svg"
                             alt="Mozilla Foundation"
                         />
                     </Link>

@@ -164,6 +164,10 @@ p {
   @apply text-black;
 }
 
+[data-reach-menu-item] {
+  @apply hover:bg-slate-200;
+}
+
 /**
  * Event Tab
  */
@@ -253,4 +257,15 @@ p {
       font-size: clamp(92px, calc(1.5rem + ((1vw - 7.68px) * 1.0417)), 1.875vw);
     }
   }
+}
+
+.language-selector {
+  @apply flex flex-col gap-2;
+}
+
+.language-selector [data-reach-menu-button] {
+  @apply w-auto justify-start;
+}
+.language-selector [data-reach-menu-popover] {
+  @apply w-auto justify-start;
 }

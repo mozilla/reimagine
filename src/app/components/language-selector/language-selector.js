@@ -3,6 +3,7 @@ import { useSelect } from "downshift";
 import classNames from "classnames";
 import Link from "next/link";
 import styles from "./language-selector.module.css";
+import * as gtag from "/lib/gtag.ts";
 
 export const LanguageSelector = () => {
   const locale = "en";
@@ -21,6 +22,13 @@ export const LanguageSelector = () => {
     highlightedIndex,
     getItemProps,
   } = useSelect({ items });
+
+  const handleLanguageChange = (locale) => {
+    gtag.event({
+      action: `Locale change: ${locale}`,
+      category: "Link click"
+    })
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -50,7 +58,7 @@ export const LanguageSelector = () => {
               {...getItemProps({ item, index })}
               className={styles.item}
             >
-              <Link href={pathname} locale={item} className={styles.link}>
+              <Link href={pathname} locale={item} className={styles.link} onClick={(item) => handleLanguageChange(item)}>
                 {`${languageNames.of(item)} - ${item.toUpperCase()}`}
               </Link>
             </li>

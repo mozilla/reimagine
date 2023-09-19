@@ -14,6 +14,7 @@ import {
     MenuLink,
 } from "@reach/menu-button";
 
+import * as gtag from "../../../../lib/gtag";
 import "@reach/tabs/styles.css";
 import "@reach/menu-button/styles.css";
 
@@ -139,6 +140,13 @@ export const EventsList = () => {
         setTabIndex(index);
     };
 
+    const handleTalkClick = (talk: Talk) => {
+        gtag.event({
+            action: talk.name,
+            category: "Ticket link click"
+        })
+    }
+
     if (!events || events.length === 0) {
         return null;
     }
@@ -188,7 +196,7 @@ export const EventsList = () => {
                                                 <h3 className={`event-talk-name`}>{talk.name}</h3>
                                                 <p>{talk.content}</p>
                                                 {talk.url && (
-                                                    <Link className={`btn btn-primary`} href={talk.url} target="_blank" rel="noreferrer noopener">Get the tickets</Link>
+                                                    <Link className={`btn btn-primary`} onClick={() => handleTalkClick(talk)} href={talk.url} target="_blank" rel="noreferrer noopener">Get the tickets</Link>
                                                 )}
                                                 {talk.inviteOnly && (
                                                     <p className={`event-talk-invite-only`}>[Invite Only]</p>

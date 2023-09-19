@@ -94,7 +94,7 @@ export const Marquee = () => {
     }, []);
 
     return (
-        <div id="free-ticket" className={`bg-black text-white section section--xl`}>
+        <div id="free-ticket" className={`bg-black text-white section section--xl overflow-hidden`}>
             <div className="marquee">
                 <div
                     className="marquee-row"

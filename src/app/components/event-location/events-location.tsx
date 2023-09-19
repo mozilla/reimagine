@@ -11,7 +11,7 @@ export const EventLocation = ({ eventInfo }: { eventInfo: EventInfo }) => {
 
     return (
         <div id="info" className={`bg-white text-black section section--xl`}>
-            <div className="container container--xl">
+            <div className="container container--xl -mb-64">
                 <div className="flex flex-col lg:flex-row lg:justify-between mb-16 lg:mb-32 gap-8 lg:gap-16">
                     <div className="flex flex-col prose">
                         <h3 className="type-heading-2">{eventInfo.venueName}</h3>

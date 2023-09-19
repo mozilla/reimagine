@@ -51,8 +51,8 @@ export const Footer = () => {
     }
 
     return (
-        <footer className="bg-black">
-            <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+        <footer className="bg-black pt-64">
+            <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-0 border-t border-slate-600">
                 <div className="flex flex-col space-x-6 gap-4 md:order-2 max-w-[100px]">
 
                     <div className="language-selector">

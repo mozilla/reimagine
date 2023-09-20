@@ -12,7 +12,8 @@
   ],
   "misc": {
     "ticketButtonText": "Get Tickets",
-    "inviteOnlyText": "Invite Only"
+    "inviteOnlyText": "Invite Only",
+    "ticketsAvailableSoon": "Tickets available soon"
   },
   "heroInfo": {
     "eventLocation": "Alte Münze<br />Berlin",
@@ -80,9 +81,9 @@
         },
         {
           "time": "6pm - 10pm",
-          "name": "Ticketing to come",
+          "name": "*Privacy Not Included",
           "content": "How creepy are your devices? Join journalists, advocates and Mozilla’s privacy experts to learn how to shop smarter for products connected to the internet.",
-          "inviteOnly": true
+          "ticketsAvailableSoon": true
         }
       ]
     },

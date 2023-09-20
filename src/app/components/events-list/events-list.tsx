@@ -109,6 +109,9 @@ export const EventsList = ({ events, misc }: EventsListProps) => {
                                                 {talk.inviteOnly && (
                                                     <p className={`event-talk-invite-only`}>[{misc.inviteOnlyText}]</p>
                                                 )}
+                                                {talk.ticketsAvailableSoon && (
+                                                    <p className={`event-talk-invite-only`}>[{misc.ticketsAvailableSoon}]</p>
+                                                )}
                                             </div>
                                         </div>
                                     ))}

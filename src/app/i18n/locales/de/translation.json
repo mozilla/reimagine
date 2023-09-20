@@ -12,7 +12,8 @@
   ],
   "misc": {
     "ticketButtonText": "Konstelose Tickets",
-    "inviteOnlyText": "Nur Einladung"
+    "inviteOnlyText": "Nur Einladung",
+    "ticketsAvailableSoon": "Tickets bald verfügbar"
   },
   "heroInfo": {
     "eventLocation": "Alte Münze<br />Berlin",
@@ -80,9 +81,9 @@
         },
         {
           "time": "6pm - 10pm",
-          "name": "Ticketing to come (de) ",
+          "name": "*Privacy Not Included",
           "content": "Wie gruselig sind deine Geräte? Gemeinsam mit Journalist*innen, Advocates und Privatsphäreexpert*innen von Mozilla erfährst du, wie du beim Kauf von Produkten, die mit dem Internet verbunden sind, die richtige Entscheidung triffst.",
-          "inviteOnly": true
+          "ticketsAvailableSoon": true
         }
       ]
     },

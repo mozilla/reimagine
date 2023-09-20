@@ -58,7 +58,7 @@ export const Footer = () => {
 
     return (
         <footer className="bg-black pt-64">
-            <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-0 border-t border-slate-600">
+            <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between xl:px-0 border-t border-slate-600">
                 <div className="flex flex-col space-x-6 gap-4 md:order-2 max-w-[100px]">
 
                     <div className="language-selector">
@@ -103,7 +103,7 @@ export const Footer = () => {
                         />
                     </Link>
                     <p className="max-w-[36em]">
-                        Visit Mozilla Corporation’s not-for-profit parent, the <Link className="underline hover:text-primary" href="https://foundation.mozilla.org/" target="_blank" rel="nofollow noreferrer">Mozilla Foundation</Link>. Portions of this content are ©1998–2022 by individual mozilla.org contributors. Content available under a <Link className="underline hover:text-primary" href="https://www.mozilla.org/en-US/foundation/licensing/website-content/" target="_blank" rel="noreferrer noopener">Creative Commons license</Link>.
+                        Portions of this content are ©1998–{new Date().getFullYear()} by individual mozilla.org contributors. Content available under a <Link className="underline hover:text-primary" href="https://www.mozilla.org/en-US/foundation/licensing/website-content/" target="_blank" rel="noreferrer noopener">Creative Commons license</Link>.
                     </p>
                     <nav className="flex gap-6" role="navigation">
                         {navigation.map((item) => (

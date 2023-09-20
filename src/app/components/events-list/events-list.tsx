@@ -32,8 +32,9 @@ const getColorIndex = (eventCount: number) => {
 interface EventsListProps {
     events: Event[];
     misc: {
-        buttonText: string;
+        ticketButtonText: string;
         inviteOnlyText: string;
+        ticketsAvailableSoon: string;
     };
 }
 

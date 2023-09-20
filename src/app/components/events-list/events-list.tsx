@@ -13,6 +13,7 @@ import {
 } from "@reach/menu-button";
 
 import * as gtag from "../../../../lib/gtag";
+import { CaretDown, CaretUp } from "../icons";
 import "@reach/tabs/styles.css";
 import "@reach/menu-button/styles.css";
 
@@ -62,19 +63,21 @@ export const EventsList = ({ events, misc }: EventsListProps) => {
 
                 <div className="flex justify-center lg:hidden mb-6">
                     <Menu>
-                        <MenuButton>
-                            <span>
-                                {`${currentEvent.day}, ${currentEvent.date}`}
-                            </span>
-                            <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.25 1.75L6.5 7L11.75 1.75" stroke="#9595A2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </MenuButton>
-                        <MenuList>
-                            {events.map((event, index) => (
-                                <MenuItem key={index} onSelect={() => handleTabsChange(index)}>{`${event.day}, ${event.date}`}</MenuItem>
-                            ))}
-                        </MenuList>
+                        {({ isExpanded }) => (
+                            <>
+                                <MenuButton>
+                                    <span>
+                                        {`${currentEvent.day}, ${currentEvent.date}`}
+                                    </span>
+                                    {isExpanded ? <CaretUp /> : <CaretDown />}
+                                </MenuButton>
+                                <MenuList>
+                                    {events.map((event, index) => (
+                                        <MenuItem key={index} onSelect={() => handleTabsChange(index)}>{`${event.day}, ${event.date}`}</MenuItem>
+                                    ))}
+                                </MenuList>
+                            </>
+                        )}
                     </Menu>
                 </div>
 

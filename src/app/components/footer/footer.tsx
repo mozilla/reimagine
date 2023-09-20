@@ -16,6 +16,7 @@ import {
     MenuItem,
 } from "@reach/menu-button";
 import * as gtag from "../../../../lib/gtag";
+import { CaretDown, CaretUp } from "../icons";
 
 const navigation = [
     { name: 'Website Privacy Notice', href: 'https://mozilla.org/privacy/websites/' },
@@ -59,25 +60,29 @@ export const Footer = () => {
     return (
         <footer className="bg-black pt-64">
             <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between xl:px-0 border-t border-slate-600">
-                <div className="flex flex-col space-x-6 gap-4 md:order-2 max-w-[100px]">
+                <div className="flex flex-col gap-4 md:order-2 max-w-[100px] lg:items-end">
 
                     <div className="language-selector">
                         <p className="font-bold">Language</p>
                         <div className="text-black">
                             <Menu>
-                                <MenuButton>
-                                    <span>
-                                        {locales.includes(currentLocale) ? languageNames.of(currentLocale) : ""}
-                                    </span>
-                                    <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.25 1.75L6.5 7L11.75 1.75" stroke="#9595A2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </MenuButton>
-                                <MenuList>
-                                    {locales.map((locale, index) => (
-                                        <MenuItem key={index} onSelect={() => handleLocaleChange(locale)}>{languageNames.of(locale)}</MenuItem>
-                                    ))}
-                                </MenuList>
+
+                                {({ isExpanded }) => (
+                                    <>
+                                        <MenuButton>
+                                            <span>
+                                                {locales.includes(currentLocale) ? languageNames.of(currentLocale) : ""}
+                                            </span>
+                                            {isExpanded ? <CaretUp /> : <CaretDown />}
+                                        </MenuButton>
+                                        <MenuList>
+                                            {locales.map((locale, index) => (
+                                                <MenuItem key={index} onSelect={() => handleLocaleChange(locale)}>{languageNames.of(locale)}</MenuItem>
+                                            ))}
+                                        </MenuList>
+                                    </>
+                                )}
+
                             </Menu>
                         </div>
                     </div>

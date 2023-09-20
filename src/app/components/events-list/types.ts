@@ -4,6 +4,7 @@ export interface Talk {
   content: string;
   url?: string;
   inviteOnly?: boolean;
+  ticketsAvailableSoon?: boolean;
 }
 
 export interface Event {

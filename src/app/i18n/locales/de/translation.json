@@ -11,7 +11,7 @@
     }
   ],
   "misc": {
-    "buttonText": "Konstelose Tickets",
+    "ticketButtonText": "Konstelose Tickets",
     "inviteOnlyText": "Nur Einladung"
   },
   "heroInfo": {

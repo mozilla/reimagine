@@ -101,7 +101,7 @@ export const EventsList = ({ events, misc }: EventsListProps) => {
                                                 <h3 className={`event-talk-name`}>{talk.name}</h3>
                                                 <p>{talk.content}</p>
                                                 {talk.url && (
-                                                    <Link className={`btn btn-primary`} onClick={() => handleTalkClick(talk)} href={talk.url} target="_blank" rel="noreferrer noopener">Get the tickets</Link>
+                                                    <Link className={`btn btn-primary`} onClick={() => handleTalkClick(talk)} href={talk.url} target="_blank" rel="noreferrer noopener">{misc.ticketButtonText}</Link>
                                                 )}
                                                 {talk.inviteOnly && (
                                                     <p className={`event-talk-invite-only`}>[{misc.inviteOnlyText}]</p>

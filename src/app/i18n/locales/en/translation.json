@@ -11,7 +11,7 @@
     }
   ],
   "misc": {
-    "buttonText": "Get Tickets",
+    "ticketButtonText": "Get Tickets",
     "inviteOnlyText": "Invite Only"
   },
   "heroInfo": {

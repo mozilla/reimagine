@@ -108,16 +108,16 @@
   ],
   "eventInfo": {
     "venueName": "Alte Münze",
-    "venueDescription": "A former mint transformed into an event space on the banks of the Spree river, Alte Münze now shapes common and tangible spaces for cultural and artistic diversity. ",
+    "venueDescription": "Nahe der Spree gelegen, ist die Alte Münze eine ehemalige Münzprägeanstalt, die heute Kunst, Kultur und Vielfalt an einem Ort vereint.",
     "venueLocation": "Alte Münze<br/>Molkenmarkt 2<br/>10179 Berlin",
     "directions": [
       {
-        "title": "Getting there",
-        "content": "Located in the middle of Berlin, Alte Münze is easily reachable by public transport. The metro lines U5 (Rotes Rathaus) and U2 (Klosterstraße) are only a short walk away. U-bahn and S-bahn Alexanderplatz also offer a wide range of transportation options only 10 minutes away from the venue."
+        "title": "Anreise",
+        "content": "Die Alte Münze liegt mitten in Berlin und ist mit öffentlichen Verkehrsmitteln leicht zu erreichen. Die U-Bahnlinien U5 (Rotes Rathaus) und U2 (Klosterstraße) sind nur einen kurzen Fußweg entfernt. U- und S-Bahn Alexanderplatz bieten ebenfalls ein breites Spektrum an Transportmöglichkeiten, nur 10 Minuten vom Veranstaltungsort entfernt."
       },
       {
-        "title": "Accessibility",
-        "content": "Alte Münze is a wheelchair accessible space.<br/>For the public exhibition, please note that the first room installation will feature flashing lights, and the third room may potentially present sensitivity issues for individuals with epilepsy. We strongly recommend that attendees exercise discretion and take into consideration any personal sensitivities or health concerns."
+        "title": "Barrierefreiheit",
+        "content": "Alte Münze ist ein rollstuhlgerechter Veranstaltungsraum.<br/>Bitte beachte bei der öffentlichen Ausstellung, dass der erste Raum blinkende Lichter beinhaltet und der dritte Raum möglicherweise für Personen mit Epilepsie nicht geeignet ist. Wir empfehlen betroffenen Besucher*innen dringend, vorsichtig zu sein und alle persönlichen Empfindlichkeiten oder gesundheitlichen Bedenken zu berücksichtigen."
       }
     ]
   }

@@ -111,6 +111,10 @@ p {
   @apply py-10 lg:py-20;
 }
 
+.section--hero-xl {
+  @apply pt-8 pb-10 lg:pt-8 lg:pb-10;
+}
+
 /**
  * Buttons
  */
@@ -206,6 +210,10 @@ p {
 
 .event-info-col {
   @apply flex flex-col gap-2 lg:basis-3/6;
+
+  p {
+    @apply mt-5;
+  }
 }
 
 .event-info-col:first-of-type {
@@ -213,7 +221,11 @@ p {
 }
 
 .event-info-heading {
-  @apply text-tertiary font-bold text-2xl flex flex-col;
+  @apply flex flex-col;
+}
+
+.event-info-text {
+  @apply text-tertiary font-bold text-3xl
 }
 
 /**
@@ -248,7 +260,7 @@ p {
 }
 
 .marquee-item-text {
-  @apply relative inline-block px-8 lg:px-16 z-[1];
+  @apply relative inline-block px-8 lg:px-16 z-[1] font-bold;
 }
 
 .marquee {

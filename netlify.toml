@@ -4,6 +4,14 @@
   [build.environment]
     NPM_FLAGS="--legacy-peer-deps"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Cache-Control = "public,max-age=3600"
+
 [[redirects]]
   from="/"
   to="/de"

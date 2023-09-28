@@ -81,8 +81,9 @@
         },
         {
           "time": "6pm - 10pm",
-          "name": "*Privacy Not Included",
-          "content": "Wie gruselig sind deine Geräte? Gemeinsam mit Journalist*innen, Advocates und Privatsphäreexpert*innen von Mozilla erfährst du, wie du beim Kauf von Produkten, die mit dem Internet verbunden sind, die richtige Entscheidung triffst.",
+          "name": "Does Privacy Have a Future?",
+          "content": "<em>A Dialogues & Debates panel</em>",
+          "additional": "<p>Join a discussion with German privacy experts about the current state of privacy trends both troubling and encouraging; and what consumers can do to maximize their privacy online. Featuring:</p><ul><li>Anna Biselli , Editor in Chief, Netzpolitik</li><li>Malte Spitz, Secretary General, Gesellschaft für Freiheitsrechte</li><li>Ashley Boyd, SVP Global Advocacy, Mozilla</li></ul>",
           "url": "https://privacynotincluded.ticket.io/purbevwx/?cryptedId=purbevwx&lang=de"
         }
       ]

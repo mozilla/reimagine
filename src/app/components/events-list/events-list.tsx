@@ -103,7 +103,10 @@ export const EventsList = ({ events, misc }: EventsListProps) => {
                                             <span className="event-talk-time">{talk.time}</span>
                                             <div className="event-talk-inner">
                                                 <h3 className={`event-talk-name`}>{talk.name}</h3>
-                                                <p>{talk.content}</p>
+                                                <p dangerouslySetInnerHTML={{ __html: talk.content }} />
+                                                {talk.additional && (
+                                                    <div className={`event-talk-additional`} dangerouslySetInnerHTML={{ __html: talk.additional }} />
+                                                )}
                                                 {talk.url && (
                                                     <Link className={`btn btn-primary`} onClick={() => handleTalkClick(talk)} href={talk.url} target="_blank" rel="noreferrer noopener">{misc.ticketButtonText}</Link>
                                                 )}

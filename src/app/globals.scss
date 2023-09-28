@@ -186,6 +186,20 @@ p {
   @apply type-heading-4;
 }
 
+.event-talk-additional {
+  p, ul {
+    @apply mb-2;
+  }
+
+  ul {
+    @apply list-disc;
+
+    li {
+      @apply ml-5;
+    }
+  }
+}
+
 /**
  * Event Talk
  */

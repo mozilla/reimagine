@@ -191,6 +191,10 @@ p {
     @apply mb-2;
   }
 
+  a {
+    text-decoration: underline;
+  }
+
   ul {
     @apply list-disc;
 
